@@ -10,7 +10,7 @@ export const Text = ({
   md,
   sm,
   xs,
-  initial = { opacity: 0 },
+  initial = { opacity: 1 },
   whileInView = { opacity: 1 },
   viewport = { once: true },
   transition = { ease: "easeOut", duration: 1 },
