@@ -12,7 +12,7 @@ export const Tile = ({
   initial = { opacity: 0 },
   whileInView = { opacity: 1 },
   viewport = { once: true },
-  transition = { ease: "easeOut", duration: 0.5 },
+  transition = { ease: "easeOut", duration: 5 },
   exit = { opacity: 0 },
   onClick = () => {},
   clickable,
@@ -29,9 +29,8 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
-      initial={initial}
-      whileInView={whileInView}
       transition={transition}
+
       exit={exit}
     >
       {children}

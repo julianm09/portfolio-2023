@@ -12,10 +12,12 @@ import SwirlScene from "@/components/Three/SwirlScene";
 import { handleTheme } from "@/utils/functions/handleTheme";
 import { useTheme } from "@/utils/provider";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Instagram, Linkedin, Mail } from "react-feather";
 
-export default function Projects() {
+export default function Home() {
   const { theme, setTheme } = useTheme();
+  const router = useRouter();
 
   return (
     <Column xl="padding: 20px;">
@@ -63,9 +65,11 @@ export default function Projects() {
         <Tile xl="grid-area: area-4; padding: 0;">
           <StarScene />
         </Tile>
-        <Tile clickable xl="grid-area: area-5;" video>
+
+        <Tile clickable xl="grid-area: area-5;" onClick={() => router.push('/')}>
           <H2 xl="margin-bottom: 20px;">Projects</H2>
         </Tile>
+
         <Tile clickable xl="grid-area: area-6;">
           <H2 xl="margin-bottom: 20px;">Ideas</H2>
         </Tile>
