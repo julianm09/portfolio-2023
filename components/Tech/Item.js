@@ -3,7 +3,7 @@ import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 
 export const Item = ({
-  key
+  key,
   children,
   xl,
   lg,
