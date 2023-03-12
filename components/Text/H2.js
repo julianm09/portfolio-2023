@@ -14,6 +14,7 @@ export const H2 = ({
   whileInView = { opacity: 1 },
   viewport = { once: true },
   transition = { ease: "easeOut", duration: 0.5 },
+  hover
 }) => {
   return (
     <Cont
@@ -26,6 +27,7 @@ export const H2 = ({
       whileInView={whileInView}
       viewport={viewport}
       transition={transition}
+      hover={hover}
     >
       {children}
     </Cont>
@@ -38,6 +40,16 @@ const Cont = styled(motion.h2)`
   margin: 0 0 20px 0;
   font-weight: ${font.h2.weight};
   font-size: ${font.h2.lg};
+
+  ${({hover}) => hover && `
+  background: linear-gradient(-90deg, #8461E7, #D0CEEE, #BB8EE9, #C6C3EC, #DEDBF0);
+	background-size: 300%;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animated_text 10s ease-in-out infinite;
+	-moz-animation: animated_text 10s ease-in-out infinite;
+	-webkit-animation: animated_text 10s ease-in-out infinite;
+  `};
 
   ${({xl}) => xl};
 

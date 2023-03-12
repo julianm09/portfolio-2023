@@ -1,7 +1,9 @@
+import { Button } from "@/components/Button/Button";
 import { Column } from "@/components/Container/Column";
 import { Container } from "@/components/Container/Container";
 import { Grid } from "@/components/Grid/Grid";
 import { Tile } from "@/components/Grid/Tile";
+import { Tech } from "@/components/Tech/Tech";
 import { H1 } from "@/components/Text/H1";
 import { H2 } from "@/components/Text/H2";
 import { H3 } from "@/components/Text/H3";
@@ -87,7 +89,7 @@ export default function Home() {
             transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
             xl="grid-area: area-2;"
           >
-            <H3 xl="margin-bottom: 20px;">Hello 👋</H3>
+            <H2 xl="margin-bottom: 20px;">Hello 👋</H2>
             <Text>
               My name is Julian, and I make websites. I love music, photography,
               and web development. My tools include Next JS, React Three Fiber,
@@ -116,40 +118,6 @@ export default function Home() {
             transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
             xl="grid-area: area-5; align-items: center;"
           >
-            <H2 xl="margin-bottom: 20px;">Photography</H2>
-          </Tile>
-
-          <Tile
-            transition={{ ease: "linear", duration: 0.5, delay: 0.3 }}
-            xl="grid-area: area-6;"
-          >
-            <H3 xl="margin-bottom: 20px;">Tech I've Used</H3>
-            <Text>
-              Next JS, React, React Native, Graph QL, Sanity, Framer Motion,
-              Three JS, React Spring, Node, Mongo DB, Postgre SQL, Stripe,
-              Shopify, Firebase, Figma, Adobe CC, Blender
-            </Text>
-          </Tile>
-          <Tile
-            transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
-            xl="grid-area: area-7; align-items: center;"
-          >
-            <H3 xl="margin-bottom: 20px;">What I'm Listening To</H3>
-            <Iframe
-              style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/playlist/6TM87gffvg0a3MlLKIn785?utm_source=generator&theme=0"
-              width="100%"
-              height="350px"
-              frameBorder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></Iframe>
-          </Tile>
-          <Tile
-            transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
-            xl="grid-area: area-8; align-items: center;"
-          >
             <Container>
               <Container xl="margin-right: 20px;">
                 <Link
@@ -173,6 +141,40 @@ export default function Home() {
                 </Link>
               </Container>
             </Container>
+          </Tile>
+
+          <Tile
+            transition={{ ease: "linear", duration: 0.5, delay: 0.3 }}
+            xl="grid-area: area-6;"
+          >
+            <H3 xl="margin-bottom: 20px;">Tech I've Used</H3>
+            <Tech />
+          </Tile>
+          <Tile
+            transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
+            xl="grid-area: area-7; align-items: center;"
+          >
+            <StarScene />
+            {/* 
+            <H3 xl="margin-bottom: 20px;">What I'm Listening To</H3>
+            <Iframe
+              style={{ borderRadius: "12px" }}
+              src="https://open.spotify.com/embed/playlist/6TM87gffvg0a3MlLKIn785?utm_source=generator&theme=0"
+              width="100%"
+              height="350px"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></Iframe> */}
+          </Tile>
+          <Tile
+            star
+            transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
+            xl="grid-area: area-8; align-items: center;"
+          >
+            <H2 xl="margin-bottom: 20px;">Get in Touch!</H2>
+            <Button>Contact Me</Button>
           </Tile>
           <Tile
             star

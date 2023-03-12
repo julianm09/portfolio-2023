@@ -34,11 +34,11 @@ export default function StarSpinScene({hover}) {
           makeDefault
           position={windowSize.width > 500 ? [0, 0, 5] : [0, 0, 10]}
         />
-        <ambientLight intensity={1} color={theme === "dark" ? "blue" : "grey"} />
+        <ambientLight intensity={1} color={"blue"} />
         <pointLight intensity={1} color={"white"} position={[10, 10, 10]} />
         <pointLight
           intensity={1}
-          color={theme === "dark" ? "pink" : "white"}
+          color={"pink"}
           position={[-100, -100, -10]}
         />
         <Star scrollTop={0} x={4} y={0} z={0} rx={0} ry={0} rz={0} />

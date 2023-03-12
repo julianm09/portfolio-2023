@@ -80,6 +80,8 @@ export default function Home() {
         </Tile>
 
         <Tile
+          headline="Projects"
+          text="A collection of Work"
           star
           transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
           clickable
@@ -90,21 +92,19 @@ export default function Home() {
               shallow: true,
             })
           }
-        >
-          <H2 xl="margin-bottom: 20px;">Projects</H2>
-          <Text>A collection of Projects I have worked on</Text>
-        </Tile>
+        />
 
         <Tile
+          headline="Ideas"
+          text="A journal of sorts"
           star
           transition={{ ease: "linear", duration: 0.5, delay: 0.3 }}
           clickable
           xl="grid-area: area-6;"
-        >
-          <H2 xl="margin-bottom: 20px;">Ideas</H2>
-          <Text>A journal of sorts</Text>
-        </Tile>
+        />
         <Tile
+          headline="About Me"
+          text="Allow me to reintroduce myself"
           star
           transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
           clickable
@@ -115,10 +115,8 @@ export default function Home() {
               shallow: true,
             })
           }
-        >
-          <H2 xl="margin-bottom: 20px;">About Me</H2>
-          <Text>Allow me to reintroduce myself</Text>
-        </Tile>
+        />
+
         <Tile
           transition={{ ease: "linear", duration: 0.5, delay: 0.6 }}
           xl="grid-area: area-8; padding: 0;"

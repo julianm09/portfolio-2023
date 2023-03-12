@@ -1,8 +1,8 @@
 export const font = {
   h1: {
-    xl: "64px",
-    lg: "48px",
-    md: "48px",
+    xl: "48px",
+    lg: "36px",
+    md: "36px",
     sm: "36px",
     weight: "700",
   },

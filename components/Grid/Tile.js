@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import StarSpinScene from "../Three/StarSpinScene";
+import { H2 } from "../Text/H2";
+import { Text } from "../Text/Text";
 
 export const Tile = ({
   children,
@@ -16,13 +18,15 @@ export const Tile = ({
   initial = { opacity: 0, x: 100 },
   whileInView = { opacity: 1, x: 0 },
   viewport = { once: true },
-  transition = { ease: "linear", duration: 0.25, },
+  transition = { ease: "linear", duration: 0.25 },
   exit = { opacity: 0, x: -100 },
   onClick = () => {},
   clickable,
   gridArea,
   url,
-  star
+  star,
+  headline,
+  text,
 }) => {
   const { router } = useRouter();
   const [hover, setHover] = useState();
@@ -44,9 +48,16 @@ export const Tile = ({
       initial={initial}
       whileInView={whileInView}
     >
+      {headline && (
+        <H2 xl="margin-bottom: 20px;" hover={hover}>
+          {headline}
+        </H2>
+      )}
+
+      {text && <Text>{text}</Text>}
       {children}
-      <Img hover={hover} url={url && url}/>
-      {star && <StarSpinScene hover={hover}/>}
+      {url && <Img hover={hover} url={url && url} />}
+      {star && <StarSpinScene hover={hover} />}
     </Cont>
   );
 };
@@ -103,5 +114,5 @@ const Img = styled.div`
   position: absolute;
   transition: 0.5s ease;
   z-index: -1;
-  opacity: ${({ hover }) => hover ? 1 : 0};
-`
+  opacity: ${({ hover }) => (hover ? 1 : 0)};
+`;

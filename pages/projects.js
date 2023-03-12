@@ -15,7 +15,14 @@ import { handleTheme } from "@/utils/functions/handleTheme";
 import { useTheme } from "@/utils/provider";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ArrowLeftCircle, ArrowRight, ArrowRightCircle, Instagram, Linkedin, Mail } from "react-feather";
+import {
+  ArrowLeftCircle,
+  ArrowRight,
+  ArrowRightCircle,
+  Instagram,
+  Linkedin,
+  Mail,
+} from "react-feather";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -37,11 +44,11 @@ export default function Home() {
           grid-template-columns: repeat(5, 1fr);
           grid-template-rows: minmax(4, 1fr) 300px;
           grid-template-areas: 
-          "area-1 area-1 area-1 area-2 area-2"
-          "area-5 area-5 area-5 area-3 area-3"
-          "area-4 area-4 area-6 area-6 area-6"
-          "area-7 area-7 area-8 area-8 area-8"
-          "area-9 area-9 area-9 area-9 area-9";
+            "area-1 area-1 area-1 area-2 area-2"
+            "area-5 area-5 area-5 area-3 area-3"
+            "area-4 area-4 area-6 area-6 area-6"
+            "area-7 area-7 area-8 area-8 area-8"
+            "area-9 area-9 area-9 area-9 area-9";
           `}
           xs={`
           grid-template-columns: repeat(5, 1fr);
@@ -59,6 +66,7 @@ export default function Home() {
           `}
         >
           <Tile
+            star
             clickable
             transition={{ ease: "linear", duration: 0.5, delay: 0.1 }}
             xl="grid-area: area-1"
@@ -70,16 +78,18 @@ export default function Home() {
             }
           >
             <Text xl="margin-bottom: 20px;">Go Back Home 🚀</Text>
-            <Text xl="color: grey"><ArrowLeftCircle/></Text>
+            <Text xl="color: grey">
+              <ArrowLeftCircle />
+            </Text>
           </Tile>
           <Tile
+            headline="Ghost"
             clickable
             url="/images/ghost.png"
             transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
             xl="grid-area: area-2; align-items: center;"
-          >
-            <H2>Ghost</H2>
-          </Tile>
+          />
+
           <Tile
             transition={{ ease: "linear", duration: 0.5, delay: 0.5 }}
             clickable
@@ -98,6 +108,7 @@ export default function Home() {
           </Tile>
 
           <Tile
+            headline="Lê La"
             url="/images/lela.gif"
             transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
             clickable
@@ -108,35 +119,34 @@ export default function Home() {
                 shallow: true,
               })
             }
-          >
-            <H2 xl="margin-bottom: 20px;">Lê La</H2>
-          </Tile>
+          />
 
           <Tile
+            headline="Nxtsndy"
             transition={{ ease: "linear", duration: 0.5, delay: 0.3 }}
             clickable
             xl="grid-area: area-6;"
             url="/images/nxtsndy.gif"
-          >
-            <H2 xl="margin-bottom: 20px;">Nxtsndy</H2>
-          </Tile>
+          />
+
           <Tile
+            headline="Emily Carr"
             url="/images/cdwil.gif"
             transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
             clickable
             xl="grid-area: area-7;"
-          >
-            <H2 xl="margin-bottom: 20px;">Emily Carr</H2>
-          </Tile>
+          />
+
           <Tile
+            url="/images/portfolio.png"
+            headline="Portfolio"
             transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
             clickable
             xl="grid-area: area-8;"
-          >
-            <H2 xl="margin-bottom: 20px;">Portfolio</H2>
-          </Tile>
+          />
+
           <Tile
-          star
+            star
             transition={{ ease: "linear", duration: 0.5, delay: 0.6 }}
             xl="grid-area: area-9; padding: 0;"
             clickable
@@ -148,7 +158,9 @@ export default function Home() {
             }
           >
             <Text xl="margin-bottom: 20px;">About Me</Text>
-          <Text xl="color: grey"><ArrowRightCircle/></Text>
+            <Text xl="color: grey">
+              <ArrowRightCircle />
+            </Text>
           </Tile>
         </Grid>
       </Column>
