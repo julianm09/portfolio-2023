@@ -30,6 +30,7 @@ export default function SwirlScene({}) {
         style={{
           width: "100%",
           height: "100%",
+          position: "absolute",
           zIndex: -100,
           background: "peachfuzz",
         }}

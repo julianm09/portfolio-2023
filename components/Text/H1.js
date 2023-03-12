@@ -38,6 +38,14 @@ const Cont = styled(motion.h1)`
   font-weight: ${font.h1.weight};
   font-size: ${font.h1.xl};
 
+	background: linear-gradient(-90deg, #8461E7, #D0CEEE, #BB8EE9, #C6C3EC, #DEDBF0);
+	background-size: 300%;
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animated_text 10s ease-in-out infinite;
+	-moz-animation: animated_text 10s ease-in-out infinite;
+	-webkit-animation: animated_text 10s ease-in-out infinite;
+
   ${({ xl }) => xl};
 
   @media (max-width: ${sizes.lg}) {

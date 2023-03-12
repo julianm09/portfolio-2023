@@ -7,10 +7,14 @@ export default function Pyramid({ px, py, pz, ry, scrollTop, color }) {
   const group = useRef();
   useFrame(
     (state) => (
-      (group.current.position.x = px),
+      (group.current.position.x = lerp(
+        group.current.position.x,
+        -px - scrollTop * 0.005,
+        0.1
+      )),
       (group.current.position.y = lerp(
         group.current.position.y,
-        py + scrollTop * 0.05,
+        py + scrollTop * 0.005,
         0.1
       )),
       (group.current.position.z = pz),

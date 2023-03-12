@@ -1,5 +1,5 @@
 export const sizes = {
-  xs: "600px",
+  xs: "1000px",
   sm: "1200px",
   md: "1500px",
   lg: "1800px",

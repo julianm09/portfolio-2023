@@ -9,7 +9,7 @@ import { useTheme } from "@/utils/provider";
 import useScrollTop from "@/hooks/useScrollTop";
 import { themes } from "@/utils/variables";
 
-export default function RocketScene({ }) {
+export default function RocketScene({}) {
   const windowSize = useWindowSize();
   const scrollTop = useScrollTop();
   const { theme } = useTheme();
@@ -31,25 +31,25 @@ export default function RocketScene({ }) {
           makeDefault
           position={windowSize.width > 500 ? [0, 0, 5] : [0, 0, 10]}
         />
-        <ambientLight intensity={1} color={theme === "dark" ? "blue" : "grey"} />
+        <ambientLight
+          intensity={1}
+          color={theme === "dark" ? "blue" : "grey"}
+        />
         <pointLight intensity={1} color={"white"} position={[10, 10, 10]} />
         <pointLight
           intensity={1}
           color={theme === "dark" ? "pink" : "white"}
           position={[-100, -100, -10]}
         />
-
-        {theme === "dark" ? (
+        {theme === "dark" && (
           <Stars
             color="black"
             radius={100}
-            depth={100}
+            depth={50}
             count={1000}
             factor={4}
             saturation={0}
           />
-        ) : (
-          <></>
         )}
         <Star scrollTop={scrollTop} x={15} y={0} z={-15} rx={0} ry={0} rz={0} />
         <Star

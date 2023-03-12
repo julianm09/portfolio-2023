@@ -34,7 +34,7 @@ export default function Star({
       //rot x
       (ref.current.rotation.x = lerp(
         rx + ref.current.position.y * 0.5,
-        5 + scrollTop * 0.05,
+        1000,
         0.03
       )),
       //

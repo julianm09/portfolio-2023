@@ -32,17 +32,15 @@ export const Grid = ({
 };
 
 const Cont = styled(motion.div)`
-display: grid; 
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: minmax(5, 1fr) 300px;
-grid-template-areas: 
-  "area-1 area-1 area-2 area-3 area-3"
-  "area-1 area-1 area-2 area-3 area-3"
-  "area-4 area-5 area-5 area-6 area-6"
-  "area-4 area-5 area-5 area-6 area-6"
-  "area-7 area-7 area-8 area-8 area-8";
-grid-gap: 20px;
-position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: minmax(3, 1fr) 300px;
+  grid-template-areas:
+    "area-1 area-1 area-2 area-3 area-3"
+    "area-4 area-5 area-5 area-6 area-6"
+    "area-7 area-7 area-8 area-8 area-9";
+  grid-gap: 20px;
+  position: relative;
 
   ${({ xl }) => xl};
 
@@ -57,20 +55,28 @@ position: relative;
   @media (max-width: ${sizes.sm}) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: minmax(7, 1fr) 300px;
-    grid-template-areas: 
-    "area-1 area-1 area-1 area-2 area-2"
-    "area-1 area-1 area-1 area-2 area-2"
-    "area-5 area-5 area-5 area-3 area-3"
-    "area-5 area-5 area-5 area-3 area-3"
-    "area-4 area-4 area-6 area-6 area-6"
-    "area-4 area-4 area-6 area-6 area-6"
-    "area-7 area-7 area-8 area-8 area-8";
+    grid-template-areas:
+      "area-1 area-1 area-1 area-2 area-2"
+      "area-5 area-5 area-5 area-3 area-3"
+      "area-4 area-4 area-6 area-6 area-6"
+      "area-7 area-7 area-7 area-8 area-8"
+      "area-9 area-9 area-9 area-9 area-9";
     ${({ sm }) => sm};
   }
 
   @media (max-width: ${sizes.xs}) {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(8, 1fr) 300px;
+    grid-template-areas:
+      "area-1 area-1 area-1 area-1 area-1"
+      "area-2 area-2 area-2 area-2 area-2"
+      "area-3 area-3 area-3 area-3 area-3"
+      "area-5 area-5 area-5 area-5 area-5"
+      "area-6 area-6 area-6 area-6 area-6"
+      "area-4 area-4 area-4 area-4 area-4"
+      "area-7 area-7 area-7 area-7 area-7"
+      "area-8 area-8 area-8 area-8 area-8"
+      "area-9 area-9 area-9 area-9 area-9";
     ${({ xs }) => xs};
   }
 `;

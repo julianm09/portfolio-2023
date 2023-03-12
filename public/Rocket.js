@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { motion } from "framer-motion";
 
 var lerp = require("lerp");
 
@@ -51,7 +52,6 @@ export default function Rocket({
         ref={ref}
         geometry={nodes.Circle003.geometry}
         material={materials["Material.001"]}
-    
         position={[-0.03, 0.52, 0.79]}
         rotation={[1.3, -Math.PI / 2, 0]}
         scale={[0.19, 0.46, 0.19]}

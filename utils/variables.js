@@ -1,6 +1,6 @@
 export const themes = {
   default: {
-    primary: "#F2F2F2",
+    primary: "#F9F9F9",
     secondary: "#212121",
     text: "#212121",
     highlight: "#37AAE1",
@@ -10,8 +10,8 @@ export const themes = {
   },
   dark: {
     primary: "#212121",
-    secondary: "#F2F2F2",
-    text: "#F2F2F2",
+    secondary: "#F9F9F9",
+    text: "#F9F9F9",
     highlight: "#37AAE1",
     button: "linear-gradient(180deg, #37AAE1 0%, #00ADFF 100%);;",
     buttonText: "#212121",
@@ -20,7 +20,7 @@ export const themes = {
 };
 
 export const sizes = {
-  xs: "600px",
+  xs: "800px",
   sm: "1200px",
   md: "1500px",
   lg: "1800px",

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
+import StarSpinScene from "../Three/StarSpinScene";
 
 export const Tile = ({
   children,
@@ -9,18 +13,24 @@ export const Tile = ({
   md,
   sm,
   xs,
-  initial = { opacity: 0 },
-  whileInView = { opacity: 1 },
+  initial = { opacity: 0, x: 100 },
+  whileInView = { opacity: 1, x: 0 },
   viewport = { once: true },
-  transition = { ease: "easeOut", duration: 5 },
-  exit = { opacity: 0 },
+  transition = { ease: "linear", duration: 0.25, },
+  exit = { opacity: 0, x: -100 },
   onClick = () => {},
   clickable,
   gridArea,
+  url,
+  star
 }) => {
+  const { router } = useRouter();
+  const [hover, setHover] = useState();
   return (
     <Cont
       onClick={onClick}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       xl={xl}
       lg={lg}
       md={md}
@@ -29,11 +39,14 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
-      transition={transition}
-
       exit={exit}
+      transition={transition}
+      initial={initial}
+      whileInView={whileInView}
     >
       {children}
+      <Img hover={hover} url={url && url}/>
+      {star && <StarSpinScene hover={hover}/>}
     </Cont>
   );
 };
@@ -45,11 +58,11 @@ const Cont = styled(motion.div)`
   padding: 40px;
   box-sizing: border-box;
   justify-content: center;
-  overflow: hidden;
+
   height: 300px;
   transition: 0.2s ease;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(111, 111, 111, 0.25);
+  border: 1px solid rgba(111, 111, 111, 0.1);
   border-radius: 10px;
   grid-area: ${({ gridArea }) => gridArea};
 
@@ -80,3 +93,15 @@ const Cont = styled(motion.div)`
     ${({ xs }) => xs};
   }
 `;
+
+const Img = styled.div`
+  width: 100%;
+  height: 100%;
+  background: url(${({ url }) => url});
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  transition: 0.5s ease;
+  z-index: -1;
+  opacity: ${({ hover }) => hover ? 1 : 0};
+`
