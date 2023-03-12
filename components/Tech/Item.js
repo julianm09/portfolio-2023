@@ -3,6 +3,7 @@ import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 
 export const Item = ({
+  key
   children,
   xl,
   lg,
@@ -19,6 +20,7 @@ export const Item = ({
 }) => {
   return (
     <Cont
+      key={key}
       xl={xl}
       lg={lg}
       md={md}

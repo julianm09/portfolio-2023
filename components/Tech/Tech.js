@@ -34,7 +34,7 @@ export const Tech = ({
       onMouseOver={onMouseOver}
       onMouseOut={onMouseOut}
     >
-      {technologies && technologies.map((item) => <Item>{item}</Item>)}
+      {technologies && technologies.map((item, i) => <Item key={key}>{item}</Item>)}
     </Cont>
   );
 };
