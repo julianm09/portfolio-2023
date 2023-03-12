@@ -9,10 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.57.2",
+    "@react-three/fiber": "^8.12.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.2.4",
+    "lerp": "^1.0.3",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-feather": "^2.0.10",
+    "styled-components": "^5.3.8"
   }
 }
