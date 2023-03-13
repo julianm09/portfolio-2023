@@ -104,7 +104,7 @@ export default function Home() {
             <Text>
               My name is Julian, and I make websites. I love music, photography,
               and web development. My main tools include Next JS, Three JS, and
-              Framer Motion. While I use Figma and Blender for design. I am
+              Framer Motion, while I use Figma and Blender for design. I am
               always open to collaborate. So don't be afraid to get in touch!
             </Text>
           </Tile>
