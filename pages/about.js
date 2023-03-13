@@ -80,7 +80,7 @@ export default function Home() {
           <Tile
             nav
             clickable
-            transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-1"
             onClick={() =>
               router.push("/", undefined, {
@@ -96,7 +96,7 @@ export default function Home() {
           </Tile>
           <Tile
             minimum
-            transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.2 }}
             xl="grid-area: area-2;"
           >
             <H2 xl="margin-bottom: 20px;">Hello 👋</H2>
@@ -108,13 +108,13 @@ export default function Home() {
             </Text>
           </Tile>
           <Tile
-            transition={{ ease: "linear", duration: 0.25, delay: 0.5 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.5 }}
             xl="grid-area: area-3; padding: 0;"
           >
             <StarScene />
           </Tile>
           <Tile
-            transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-4; padding: 0;"
           >
             <StarSceneTwo />
@@ -122,7 +122,7 @@ export default function Home() {
 
           <Tile
             nav
-            transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.2 }}
             xl="grid-area: area-5; align-items: center;"
           >
             <Container>
@@ -152,14 +152,14 @@ export default function Home() {
 
           <Tile
             minimum
-            transition={{ ease: "linear", duration: 0.25, delay: 0.3 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.3 }}
             xl="grid-area: area-6;"
           >
             <H3 xl="margin-bottom: 20px;">Tech I've Used</H3>
             <Tech />
           </Tile>
           <Tile
-            transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-7; padding: 0;"
           >
             <StarSceneThree />
@@ -167,7 +167,7 @@ export default function Home() {
           <Tile
             minimum
             star
-            transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.4 }}
             xl="grid-area: area-8; align-items: center;"
           >
             <H3 xl="margin-bottom: 20px;">Get in Touch!</H3>
@@ -177,7 +177,7 @@ export default function Home() {
           <Tile
             nav
             star
-            transition={{ ease: "linear", duration: 0.25, delay: 0.6 }}
+            transition={{ type: "linear", duration: 0.25, delay: 0.6 }}
             xl="grid-area: area-9;"
             clickable
             onClick={() =>
