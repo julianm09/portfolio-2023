@@ -46,6 +46,10 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
+      exit={exit}
+      transition={transition}
+      initial={initial}
+      whileInView={whileInView}
       url={url}
       headline={headline}
       minimum={minimum}
@@ -69,7 +73,7 @@ const Cont = styled(motion.div)`
   position: relative;
   flex-direction: column;
   padding: 60px 40px;
-  min-height: 350px;
+  min-height: 300px;
   box-sizing: border-box;
   justify-content: center;
   transition: 0.2s ease;
