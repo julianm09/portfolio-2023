@@ -45,9 +45,9 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
-      exit={exit}
+      exit={{ opacity: width > 800 ? 0 : 1 }}
       transition={transition}
-      initial={initial}
+      initial={{ opacity: width > 800 ? 0 : 1 }}
       whileInView={whileInView}
       url={url}
       headline={headline}
@@ -77,7 +77,6 @@ const Cont = styled(motion.div)`
   box-sizing: border-box;
   justify-content: center;
   transition: 0.2s ease;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(111, 111, 111, 0.1);
   border-radius: 10px;
   grid-area: ${({ gridArea }) => gridArea};
@@ -85,10 +84,11 @@ const Cont = styled(motion.div)`
   ${({ clickable }) =>
     clickable &&
     `
-  align-items: center; 
-  cursor: pointer; 
-  &:hover{
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    align-items: center; 
+    cursor: pointer; 
+    &:hover{
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
   }`}
 
   ${({ xl }) => xl};
