@@ -169,7 +169,7 @@ export default function Home() {
             url="/images/nxtsndy.gif"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
-              Clothing Brand based in Toronto
+              Clothing brand based in Toronto
             </Text>
             <Container>
               <Item>Next JS</Item>
