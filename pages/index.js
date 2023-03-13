@@ -32,7 +32,7 @@ export default function Home() {
           transition={{ ease: "linear", duration: 0.5, delay: 0.1 }}
           xl="grid-area: area-1;"
         >
-          <H1 xl="margin-bottom: 20px;">Hi, I'm Julian Mayes</H1>
+          <H1 xl="margin-bottom: 20px;">Hi, I'm Julian</H1>
           <Text>
             A web developer and designer based in Vancouver, BC. This website is
             a playground to showcase what I have been working on. Thanks for

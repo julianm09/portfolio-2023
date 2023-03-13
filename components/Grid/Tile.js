@@ -47,7 +47,7 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
-      exit={exit}
+
       transition={transition}
       initial={initial}
       whileInView={whileInView}
