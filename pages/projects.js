@@ -49,13 +49,15 @@ export default function Home() {
           `}
           sm={`
           grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: minmax(4, 1fr) 300px;
+          grid-template-rows: minmax(7, 1fr) 300px;
           grid-template-areas: 
             "area-1 area-1 area-2 area-2 area-2"
-            "area-5 area-5 area-5 area-3 area-3"
+            "area-5 area-5 area-5 area-5 area-5"
+            "area-3 area-3 area-3 area-3 area-3"
             "area-4 area-4 area-6 area-6 area-6"
             "area-7 area-7 area-7 area-7 area-7"
-            "area-8 area-8 area-8 area-9 area-9";
+            "area-8 area-8 area-8 area-8 area-8"
+            "area-9 area-9 area-9 area-9 area-9";
           `}
           xs={`
           grid-template-columns: repeat(5, 1fr);
