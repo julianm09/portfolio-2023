@@ -34,40 +34,75 @@ export const Tile = ({
   const [hover, setHover] = useState();
   const { width } = useWindowSize();
 
-  return (
-    <Cont
-      onClick={onClick}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      xl={xl}
-      lg={lg}
-      md={md}
-      sm={sm}
-      xs={xs}
-      clickable={clickable}
-      gridArea={gridArea}
-      viewport={viewport}
-      exit={exit}
-      transition={transition}
-      initial={initial}
-      whileInView={whileInView}
-      url={url}
-      headline={headline}
-      minimum={minimum}
-      nav={nav}
-    >
-      {headline && (
-        <H3 xl="margin-bottom: 10px;" hover={hover}>
-          {headline}
-        </H3>
-      )}
+  if (width < 800) {
+    return (
+      <Cont
+        onClick={onClick}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        xl={xl}
+        lg={lg}
+        md={md}
+        sm={sm}
+        xs={xs}
+        clickable={clickable}
+        gridArea={gridArea}
+        viewport={viewport}
+        url={url}
+        headline={headline}
+        minimum={minimum}
+        nav={nav}
+      >
+        {headline && (
+          <H3 xl="margin-bottom: 10px;" hover={hover}>
+            {headline}
+          </H3>
+        )}
 
-      {text && <Text>{text}</Text>}
-      {children}
-      {url && <Img hover={hover} url={url && url} />}
-      {star && <StarSpinScene hover={hover} />}
-    </Cont>
-  );
+        {text && <Text>{text}</Text>}
+        {children}
+        {url && <Img hover={hover} url={url && url} />}
+        {star && <StarSpinScene hover={hover} />}
+      </Cont>
+    );
+  }
+
+  if (width > 800) {
+    return (
+      <Cont
+        onClick={onClick}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        xl={xl}
+        lg={lg}
+        md={md}
+        sm={sm}
+        xs={xs}
+        clickable={clickable}
+        gridArea={gridArea}
+        viewport={viewport}
+        exit={exit}
+        transition={transition}
+        initial={initial}
+        whileInView={whileInView}
+        url={url}
+        headline={headline}
+        minimum={minimum}
+        nav={nav}
+      >
+        {headline && (
+          <H3 xl="margin-bottom: 10px;" hover={hover}>
+            {headline}
+          </H3>
+        )}
+
+        {text && <Text>{text}</Text>}
+        {children}
+        {url && <Img hover={hover} url={url && url} />}
+        {star && <StarSpinScene hover={hover} />}
+      </Cont>
+    );
+  }
 };
 
 const Cont = styled(motion.div)`
@@ -75,7 +110,7 @@ const Cont = styled(motion.div)`
   position: relative;
   flex-direction: column;
   padding: 60px 40px;
-  min-height: ${({ nav }) => nav ? "100px" : "350px"};
+  min-height: ${({ nav }) => (nav ? "100px" : "350px")};
   box-sizing: border-box;
   justify-content: center;
   transition: 0.2s ease;
