@@ -76,7 +76,7 @@ export default function Home() {
             nav
             star
             clickable
-            transition={{ type: "linear", duration: 0.25, delay: 0.1 }}
+            transition={{ duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-1"
             onClick={() =>
               router.push("/", undefined, {
@@ -97,7 +97,7 @@ export default function Home() {
             headline="Ghost"
             clickable
             url="/images/ghost.png"
-            transition={{ type: "linear", duration: 0.25, delay: 0.2 }}
+            transition={{ duration: 0.25, delay: 0.2 }}
             xl="grid-area: area-7; align-items: center;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
@@ -114,7 +114,7 @@ export default function Home() {
             headline="Cowboy Interactive"
             clickable
             url="/images/cowboy.png"
-            transition={{ type: "linear", duration: 0.25, delay: 0.5 }}
+            transition={{ duration: 0.25, delay: 0.5 }}
             xl="grid-area: area-3; padding: 0;"
             onClick={() => {
               window.open("https://www.cowboyinteractive.com/", "_ blank");
@@ -130,7 +130,7 @@ export default function Home() {
             </Container>
           </Tile>
           <Tile
-            transition={{ type: "linear", duration: 0.25, delay: 0.1 }}
+            transition={{ duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-4; padding: 0;"
           >
             <StarSceneTwo />
@@ -142,7 +142,7 @@ export default function Home() {
             }}
             headline="Lê La"
             url="/images/lela.gif"
-            transition={{ type: "linear", duration: 0.25, delay: 0.2 }}
+            transition={{ duration: 0.25, delay: 0.2 }}
             clickable
             xl="grid-area: area-5;"
           >
@@ -161,7 +161,7 @@ export default function Home() {
               window.open("https://www.nxtsndy.com/", "_ blank");
             }}
             headline="Nxtsndy"
-            transition={{ type: "linear", duration: 0.25, delay: 0.3 }}
+            transition={{ duration: 0.25, delay: 0.3 }}
             clickable
             xl="grid-area: area-6;"
             url="/images/nxtsndy.gif"
@@ -182,7 +182,7 @@ export default function Home() {
             }}
             headline="CD + WIL"
             url="/images/cdwil.gif"
-            transition={{ type: "linear", duration: 0.25, delay: 0.4 }}
+            transition={{ duration: 0.25, delay: 0.4 }}
             clickable
             xl="grid-area: area-2;"
           >
@@ -205,7 +205,7 @@ export default function Home() {
             }}
             url="/images/portfolio.png"
             headline="Portfolio V1"
-            transition={{ type: "linear", duration: 0.25, delay: 0.4 }}
+            transition={{ duration: 0.25, delay: 0.4 }}
             clickable
             xl="grid-area: area-8;"
           >
@@ -222,7 +222,7 @@ export default function Home() {
           <Tile
             nav
             star
-            transition={{ type: "linear", duration: 0.25, delay: 0.6 }}
+            transition={{ duration: 0.25, delay: 0.6 }}
             xl="grid-area: area-9;"
             clickable
             onClick={() =>
