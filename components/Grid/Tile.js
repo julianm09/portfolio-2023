@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import StarSpinScene from "../Three/StarSpinScene";
 import { H2 } from "../Text/H2";
@@ -28,10 +27,9 @@ export const Tile = ({
   star,
   headline,
   text,
+  minimum,
 }) => {
-  const { router } = useRouter();
   const [hover, setHover] = useState();
-
   const { width } = useWindowSize();
 
   return (
@@ -47,12 +45,13 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
-      exit={exit}
+      exit={{ opacity: width > 800 ? 0 : 1 }}
       transition={transition}
-      initial={initial}
+      initial={{ opacity: width > 800 ? 0 : 1 }}
       whileInView={whileInView}
       url={url}
       headline={headline}
+      minimum={minimum}
     >
       {headline && (
         <H2 xl="margin-bottom: 20px;" hover={hover}>
@@ -68,12 +67,13 @@ export const Tile = ({
   );
 };
 
-const Cont = styled.div`
+const Cont = styled(motion.div)`
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 80px;
-  min-height: ${({ headline, url }) => (url || headline ? "300px" : "100px")};
+  padding: 60px 60px;
+  min-height: ${({ headline, url, minimum }) =>
+    url || headline || minimum ? "300px" : "100px"};
   box-sizing: border-box;
   justify-content: center;
   transition: 0.2s ease;

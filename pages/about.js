@@ -91,6 +91,7 @@ export default function Home() {
             </Text>
           </Tile>
           <Tile
+            minimum
             transition={{ duration: 0.5, delay: 0.2 }}
             xl="grid-area: area-2;"
           >
@@ -149,6 +150,7 @@ export default function Home() {
           </Tile>
 
           <Tile
+            minimum
             transition={{ duration: 0.5, delay: 0.3 }}
             xl="grid-area: area-6;"
           >
@@ -164,11 +166,12 @@ export default function Home() {
             <StarScene />
           </Tile>
           <Tile
+            minimum
             star
             transition={{ duration: 0.5, delay: 0.4 }}
             xl="grid-area: area-8; align-items: center;"
           >
-            <H2 xl="margin-bottom: 20px;">Get in Touch!</H2>
+            <H3 xl="margin-bottom: 20px;">Get in Touch!</H3>
             <Button>Contact Me</Button>
           </Tile>
           <Tile
