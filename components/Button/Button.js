@@ -65,7 +65,7 @@ const ButtonUI = styled(motion.button)`
   transition: 0.2s ease;
   font-weight: 500;
   font-size 16px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 
   ${(props) => props.all};
 

@@ -2,6 +2,7 @@ import { Column } from "@/components/Container/Column";
 import { Container } from "@/components/Container/Container";
 import { Grid } from "@/components/Grid/Grid";
 import { Tile } from "@/components/Grid/Tile";
+import { Item } from "@/components/Tech/Item";
 import { H1 } from "@/components/Text/H1";
 import { H2 } from "@/components/Text/H2";
 import { Text } from "@/components/Text/Text";
@@ -10,6 +11,7 @@ import PyramidScene from "@/components/Three/PyramidScene";
 import RocketScene from "@/components/Three/RocketScene";
 import Scene from "@/components/Three/Scene";
 import StarScene from "@/components/Three/StarScene";
+import StarSceneTwo from "@/components/Three/StarSceneTwo";
 import SwirlScene from "@/components/Three/SwirlScene";
 import { handleTheme } from "@/utils/functions/handleTheme";
 import { useTheme } from "@/utils/provider";
@@ -30,8 +32,8 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -49,11 +51,11 @@ export default function Home() {
           grid-template-columns: repeat(5, 1fr);
           grid-template-rows: minmax(4, 1fr) 300px;
           grid-template-areas: 
-            "area-1 area-1 area-1 area-2 area-2"
+            "area-1 area-1 area-2 area-2 area-2"
             "area-5 area-5 area-5 area-3 area-3"
             "area-4 area-4 area-6 area-6 area-6"
-            "area-7 area-7 area-8 area-8 area-8"
-            "area-9 area-9 area-9 area-9 area-9";
+            "area-7 area-7 area-7 area-7 area-7"
+            "area-8 area-8 area-8 area-9 area-9";
           `}
           xs={`
           grid-template-columns: repeat(5, 1fr);
@@ -88,67 +90,117 @@ export default function Home() {
             </Text>
           </Tile>
           <Tile
+            onClick={() => {
+              window.open("https://ghost-two.vercel.app/", "_ blank");
+            }}
             headline="Ghost"
             clickable
             url="/images/ghost.png"
             transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
-            xl="grid-area: area-2; align-items: center;"
-          />
+            xl="grid-area: area-7; align-items: center;"
+          >
+            <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
+              Invisible pimple patches.
+            </Text>
+            <Container>
+              <Item>Next JS</Item>
+              <Item>Blender</Item>
+              <Item>Framer Motion</Item>
+            </Container>
+          </Tile>
 
           <Tile
             transition={{ ease: "linear", duration: 0.5, delay: 0.5 }}
-            clickable
             xl="grid-area: area-3; padding: 0;"
-            onClick={() => handleTheme(theme, setTheme)}
           >
             <StarScene />
           </Tile>
           <Tile
             transition={{ ease: "linear", duration: 0.5, delay: 0.1 }}
             xl="grid-area: area-4; padding: 0;"
-            clickable
-            onClick={() => handleTheme(theme, setTheme)}
           >
-            <StarScene />
+            <StarSceneTwo />
           </Tile>
 
           <Tile
+            onClick={() => {
+              window.open("https://www.lelavietnamese.com/", "_ blank");
+            }}
             headline="Lê La"
             url="/images/lela.gif"
             transition={{ ease: "linear", duration: 0.5, delay: 0.2 }}
             clickable
             xl="grid-area: area-5;"
-            onClick={() =>
-              router.push("/", undefined, {
-                scroll: false,
-                shallow: true,
-              })
-            }
-          />
+          >
+            <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
+              Authentic Vietnamese restaurant in Calgary
+            </Text>
+            <Container>
+              <Item>Next JS</Item>
+              <Item>Sanity</Item>
+              <Item>GraphQL</Item>
+            </Container>
+          </Tile>
 
           <Tile
+            onClick={() => {
+              window.open("https://www.nxtsndy.com/", "_ blank");
+            }}
             headline="Nxtsndy"
             transition={{ ease: "linear", duration: 0.5, delay: 0.3 }}
             clickable
             xl="grid-area: area-6;"
             url="/images/nxtsndy.gif"
-          />
+          >
+            <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
+              Clothing Brand based in Toronto
+            </Text>
+            <Container>
+              <Item>Next JS</Item>
+              <Item>Sanity</Item>
+              <Item>Graph QL</Item>
+            </Container>
+          </Tile>
 
           <Tile
-            headline="Emily Carr"
+            onClick={() => {
+              window.open("https://www.creativecareers.ca/", "_ blank");
+            }}
+            headline="CD + WIL"
             url="/images/cdwil.gif"
             transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
             clickable
-            xl="grid-area: area-7;"
-          />
+            xl="grid-area: area-2;"
+          >
+            <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
+              Emily Carr's career development office.
+            </Text>
+            <Container>
+              <Item>React JS</Item>
+              <Item>Sanity</Item>
+              <Item>Graph QL</Item>
+            </Container>
+          </Tile>
 
           <Tile
+            onClick={() => {
+              window.open("https://ghost-two.vercel.app/", "_ blank");
+            }}
             url="/images/portfolio.png"
-            headline="Portfolio"
+            headline="Portfolio V1"
             transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
             clickable
             xl="grid-area: area-8;"
-          />
+          >
+            <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
+              My previous portfolio website!
+            </Text>
+            <Container>
+              <Item>Next JS</Item>
+              <Item>Framer Motion</Item>
+              <Item>Three JS</Item>
+            </Container>
+          </Tile>
 
           <Tile
             star

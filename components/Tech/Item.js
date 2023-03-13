@@ -48,12 +48,8 @@ const Cont = styled(motion.div)`
   margin: 0 5px 5px 0;
   font-size: 12px;
   font-weight: 500;
-  border: 1px solid grey;
-  // background: linear-gradient(-90deg, #DEDBF0, #D0CEEE, #BB8EE9, #C6C3EC, #DEDBF0);
-	// background-size: 300%;
-	// animation: animated_text 10s ease-in-out infinite;
-	// -moz-animation: animated_text 10s ease-in-out infinite;
-	// -webkit-animation: animated_text 10s ease-in-out infinite;
+  border: 1px solid lightgrey;
+  color: grey;
 
   ${({ xl }) => xl};
 

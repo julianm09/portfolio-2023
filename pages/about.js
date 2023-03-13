@@ -13,6 +13,8 @@ import PyramidScene from "@/components/Three/PyramidScene";
 import RocketScene from "@/components/Three/RocketScene";
 import Scene from "@/components/Three/Scene";
 import StarScene from "@/components/Three/StarScene";
+import StarSceneThree from "@/components/Three/StarSceneThree";
+import StarSceneTwo from "@/components/Three/StarSceneTwo";
 import SwirlScene from "@/components/Three/SwirlScene";
 import { handleTheme } from "@/utils/functions/handleTheme";
 import { useTheme } from "@/utils/provider";
@@ -105,19 +107,15 @@ export default function Home() {
           </Tile>
           <Tile
             transition={{ duration: 0.5, delay: 0.5 }}
-            clickable
             xl="grid-area: area-3; padding: 0;"
-            onClick={() => handleTheme(theme, setTheme)}
           >
             <StarScene />
           </Tile>
           <Tile
             transition={{ duration: 0.5, delay: 0.1 }}
             xl="grid-area: area-4; padding: 0;"
-            clickable
-            onClick={() => handleTheme(theme, setTheme)}
           >
-            <StarScene />
+            <StarSceneTwo />
           </Tile>
 
           <Tile
@@ -142,7 +140,7 @@ export default function Home() {
                 </Link>
               </Container>
               <Container>
-                <Link href="#">
+                <Link href="mailto:julianmayes@gmail.com">
                   <Mail />
                 </Link>
               </Container>
@@ -160,10 +158,8 @@ export default function Home() {
           <Tile
             transition={{ duration: 0.5, delay: 0.1 }}
             xl="grid-area: area-7; padding: 0;"
-            clickable
-            onClick={() => handleTheme(theme, setTheme)}
           >
-            <StarScene />
+            <StarSceneThree />
           </Tile>
           <Tile
             minimum
@@ -172,7 +168,8 @@ export default function Home() {
             xl="grid-area: area-8; align-items: center;"
           >
             <H3 xl="margin-bottom: 20px;">Get in Touch!</H3>
-            <Button>Contact Me</Button>
+
+            <Button href="mailto:julianmayes@gmail.com">Contact Me</Button>
           </Tile>
           <Tile
             star

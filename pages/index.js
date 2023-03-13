@@ -61,7 +61,7 @@ export default function Home() {
               </Link>
             </Container>
             <Container>
-              <Link href="#">
+              <Link href="mailto:julianmayes@gmail.com">
                 <Mail />
               </Link>
             </Container>
@@ -78,15 +78,13 @@ export default function Home() {
         <Tile
           transition={{ duration: 0.5, delay: 0.1 }}
           xl="grid-area: area-4; padding: 0;"
-          clickable
-          onClick={() => handleTheme(theme, setTheme)}
         >
           <StarScene />
         </Tile>
 
         <Tile
           headline="Projects"
-          text="A collection of Work"
+          text="A collection of work"
           star
           transition={{ duration: 0.5, delay: 0.2 }}
           clickable
@@ -100,12 +98,10 @@ export default function Home() {
         />
 
         <Tile
-          headline="Ideas"
-          text="A journal of sorts"
-          star
+          headline="Blog"
+          text="Coming Soon"
           transition={{ duration: 0.5, delay: 0.3 }}
-          clickable
-          xl="grid-area: area-6;"
+          xl="grid-area: area-7; align-items: center;"
         />
         <Tile
           headline="About Me"
@@ -113,7 +109,7 @@ export default function Home() {
           star
           transition={{ duration: 0.5, delay: 0.4 }}
           clickable
-          xl="grid-area: area-7;"
+          xl="grid-area: area-6;"
           onClick={() =>
             router.push("/about", undefined, {
               scroll: false,
@@ -125,8 +121,6 @@ export default function Home() {
         <Tile
           transition={{ duration: 0.5, delay: 0.6 }}
           xl="grid-area: area-8; padding: 0;"
-          clickable
-          onClick={() => handleTheme(theme, setTheme)}
         >
           <StarScene />
         </Tile>

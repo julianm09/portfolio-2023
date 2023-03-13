@@ -40,6 +40,8 @@ export const Container = ({
 const Cont = styled(motion.div)`
   display: flex;
   position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
 
   ${({ xl }) => xl};
 

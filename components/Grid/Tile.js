@@ -7,6 +7,7 @@ import StarSpinScene from "../Three/StarSpinScene";
 import { H2 } from "../Text/H2";
 import { Text } from "../Text/Text";
 import useWindowSize from "@/hooks/useWindowSize";
+import { H3 } from "../Text/H3";
 
 export const Tile = ({
   children,
@@ -45,18 +46,18 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
-      exit={{ opacity: width > 800 ? 0 : 1 }}
+      exit={exit}
       transition={transition}
-      initial={{ opacity: width > 800 ? 0 : 1 }}
+      initial={initial}
       whileInView={whileInView}
       url={url}
       headline={headline}
       minimum={minimum}
     >
       {headline && (
-        <H2 xl="margin-bottom: 20px;" hover={hover}>
+        <H3 xl="margin-bottom: 10px;" hover={hover}>
           {headline}
-        </H2>
+        </H3>
       )}
 
       {text && <Text>{text}</Text>}
@@ -71,20 +72,20 @@ const Cont = styled(motion.div)`
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 60px 60px;
-  min-height: ${({ headline, url, minimum }) =>
-    url || headline || minimum ? "300px" : "100px"};
+  padding: 60px 40px;
+  min-height: 300px;
   box-sizing: border-box;
   justify-content: center;
   transition: 0.2s ease;
   border: 1px solid rgba(111, 111, 111, 0.1);
   border-radius: 10px;
   grid-area: ${({ gridArea }) => gridArea};
+  overflow: hidden;
 
   ${({ clickable }) =>
     clickable &&
     `
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.1);
     align-items: center; 
     cursor: pointer; 
     &:hover{
@@ -118,7 +119,7 @@ const Img = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  transition: 0.5s ease;
-  z-index: -1;
+  transition: 0.25s ease;
+  z-index: ${({ hover }) => (hover ? 1 : -1)};
   opacity: ${({ hover }) => (hover ? 1 : 0)};
 `;
