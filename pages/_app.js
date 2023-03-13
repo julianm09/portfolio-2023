@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   return (
     <AppProvider>
-      <AnimatePresence mode='wait'>
+      <AnimatePresence>
         <Component {...pageProps} key={router.route}/>
       </AnimatePresence>
     </AppProvider>

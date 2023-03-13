@@ -82,6 +82,14 @@ const Cont = styled(motion.div)`
   border-radius: 10px;
   grid-area: ${({ gridArea }) => gridArea};
 
+  ${({ clickable }) =>
+    clickable &&
+    `
+  align-items: center; 
+  cursor: pointer; 
+  &:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+  }`}
 
   ${({ xl }) => xl};
 
