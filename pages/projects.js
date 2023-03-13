@@ -110,10 +110,23 @@ export default function Home() {
           </Tile>
 
           <Tile
+            headline="Cowboy Interactive"
+            clickable
+            url="/images/cowboy.png"
             transition={{ ease: "linear", duration: 0.5, delay: 0.5 }}
             xl="grid-area: area-3; padding: 0;"
+            onClick={() => {
+              window.open("https://www.cowboyinteractive.com/", "_ blank");
+            }}
           >
-            <StarScene />
+            <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
+              Custom web development service
+            </Text>
+            <Container>
+              <Item>Next JS</Item>
+              <Item>Three JS</Item>
+              <Item>Framer Motion</Item>
+            </Container>
           </Tile>
           <Tile
             transition={{ ease: "linear", duration: 0.5, delay: 0.1 }}
@@ -184,7 +197,10 @@ export default function Home() {
 
           <Tile
             onClick={() => {
-              window.open("https://julian-mayes-portfolio-n1gvg7mkm-cre8rec.vercel.app/", "_ blank");
+              window.open(
+                "https://julian-mayes-portfolio-n1gvg7mkm-cre8rec.vercel.app/",
+                "_ blank"
+              );
             }}
             url="/images/portfolio.png"
             headline="Portfolio V1"

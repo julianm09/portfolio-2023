@@ -25,6 +25,7 @@ import {
   ArrowLeftCircle,
   ArrowRight,
   ArrowRightCircle,
+  GitHub,
   Instagram,
   Linkedin,
   Mail,
@@ -100,7 +101,7 @@ export default function Home() {
             <H2 xl="margin-bottom: 20px;">Hello 👋</H2>
             <Text>
               My name is Julian, and I make websites. I love music, photography,
-              and web development. My tools include Next JS, React Three Fiber,
+              and web development. My main tools include Next JS, Three JS,
               and Framer Motion. While I use Figma and Blender for design. I am
               always open to collaborate. So don't be afraid to get in touch!
             </Text>
@@ -140,8 +141,8 @@ export default function Home() {
                 </Link>
               </Container>
               <Container>
-                <Link href="mailto:julianmayes@gmail.com">
-                  <Mail />
+                <Link href="https://github.com/julianmayes" target="_blank">
+                  <GitHub />
                 </Link>
               </Container>
             </Container>

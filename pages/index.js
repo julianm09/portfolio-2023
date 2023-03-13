@@ -1,3 +1,4 @@
+import { Button } from "@/components/Button/Button";
 import { Column } from "@/components/Container/Column";
 import { Container } from "@/components/Container/Container";
 import { Grid } from "@/components/Grid/Grid";
@@ -15,7 +16,7 @@ import { useTheme } from "@/utils/provider";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { ArrowRightCircle, Instagram, Linkedin, Mail } from "react-feather";
+import { ArrowRightCircle, GitHub, Instagram, Linkedin, Mail } from "react-feather";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -32,12 +33,13 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.1 }}
           xl="grid-area: area-1;"
         >
-          <H1 xl="margin-bottom: 20px;">Hi, I'm Julian</H1>
-          <Text>
+          <H1 xl="margin-bottom: 10px;">Hi, I'm Julian</H1>
+          <Text xl="margin-bottom: 20px;">
             A web developer and designer based in Vancouver, BC. This website is
             a playground to showcase what I have been working on. Thanks for
             visiting 🚀
           </Text>
+          <Button href="mailto:julianmayes@gmail.com">Contact Me</Button>
         </Tile>
         <Tile
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -61,8 +63,8 @@ export default function Home() {
               </Link>
             </Container>
             <Container>
-              <Link href="mailto:julianmayes@gmail.com">
-                <Mail />
+              <Link href="https://github.com/julianmayes" target="_blank">
+                <GitHub />
               </Link>
             </Container>
           </Container>
@@ -101,11 +103,11 @@ export default function Home() {
           headline="Blog"
           text="Coming Soon"
           transition={{ duration: 0.5, delay: 0.3 }}
-          xl="grid-area: area-7; align-items: center;"
+          xl="grid-area: area-7; align-items: center; color: grey;"
         />
         <Tile
           headline="About Me"
-          text="Allow me to reintroduce myself"
+          text="Allow me to introduce myself"
           star
           transition={{ duration: 0.5, delay: 0.4 }}
           clickable
