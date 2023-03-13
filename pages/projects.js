@@ -184,7 +184,7 @@ export default function Home() {
 
           <Tile
             onClick={() => {
-              window.open("https://ghost-two.vercel.app/", "_ blank");
+              window.open("https://julian-mayes-portfolio-n1gvg7mkm-cre8rec.vercel.app/", "_ blank");
             }}
             url="/images/portfolio.png"
             headline="Portfolio V1"
