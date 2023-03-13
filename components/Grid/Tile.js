@@ -126,7 +126,7 @@ const Cont = styled(motion.div)`
     align-items: center; 
     cursor: pointer; 
     &:hover{
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
   }`}
 
   ${({ xl }) => xl};

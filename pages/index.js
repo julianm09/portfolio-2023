@@ -140,13 +140,13 @@ export default function Home() {
           xl="grid-area: area-9;"
           clickable
           onClick={() =>
-            router.push("/projects", undefined, {
+            router.push("/about", undefined, {
               scroll: false,
               shallow: true,
             })
           }
         >
-          <Text xl="margin-bottom: 20px;">Projects</Text>
+          <Text xl="margin-bottom: 20px;">About Me</Text>
           <Text xl="color: grey">
             <ArrowRightCircle />
           </Text>

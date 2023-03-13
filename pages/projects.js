@@ -44,7 +44,7 @@ export default function Home() {
           grid-template-rows: minmax(3, 1fr) 300px;
           grid-template-areas: 
             "area-1 area-2 area-2 area-3 area-3"
-            "area-4 area-5 area-5 area-6 area-6"
+            "area-6 area-6 area-4 area-5 area-5"
             "area-7 area-7 area-8 area-8 area-9";
           `}
           sm={`
