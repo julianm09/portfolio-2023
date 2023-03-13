@@ -78,6 +78,7 @@ export default function Home() {
           `}
         >
           <Tile
+            nav
             clickable
             transition={{ type: "ease", duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-1"
@@ -101,8 +102,8 @@ export default function Home() {
             <H2 xl="margin-bottom: 20px;">Hello 👋</H2>
             <Text>
               My name is Julian, and I make websites. I love music, photography,
-              and web development. My main tools include Next JS, Three JS,
-              and Framer Motion. While I use Figma and Blender for design. I am
+              and web development. My main tools include Next JS, Three JS, and
+              Framer Motion. While I use Figma and Blender for design. I am
               always open to collaborate. So don't be afraid to get in touch!
             </Text>
           </Tile>
@@ -120,6 +121,7 @@ export default function Home() {
           </Tile>
 
           <Tile
+            nav
             transition={{ type: "ease", duration: 0.25, delay: 0.2 }}
             xl="grid-area: area-5; align-items: center;"
           >
@@ -173,6 +175,7 @@ export default function Home() {
             <Button href="mailto:julianmayes@gmail.com">Contact Me</Button>
           </Tile>
           <Tile
+            nav
             star
             transition={{ type: "ease", duration: 0.25, delay: 0.6 }}
             xl="grid-area: area-9;"

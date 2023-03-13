@@ -73,6 +73,7 @@ export default function Home() {
           `}
         >
           <Tile
+            nav
             star
             clickable
             transition={{ type: "ease", duration: 0.25, delay: 0.1 }}
@@ -219,6 +220,7 @@ export default function Home() {
           </Tile>
 
           <Tile
+            nav
             star
             transition={{ type: "ease", duration: 0.25, delay: 0.6 }}
             xl="grid-area: area-9;"

@@ -48,6 +48,7 @@ export default function Home() {
           <Button href="mailto:julianmayes@gmail.com">Contact Me</Button>
         </Tile>
         <Tile
+          nav
           transition={{ type: "ease", duration: 0.25, delay: 0.2 }}
           xl="grid-area: area-2; align-items: center;"
         >
@@ -133,6 +134,7 @@ export default function Home() {
           <StarScene />
         </Tile>
         <Tile
+          nav
           star
           transition={{ type: "ease", duration: 0.25, delay: 0.6 }}
           xl="grid-area: area-9;"

@@ -29,6 +29,7 @@ export const Tile = ({
   headline,
   text,
   minimum,
+  nav,
 }) => {
   const [hover, setHover] = useState();
   const { width } = useWindowSize();
@@ -53,6 +54,7 @@ export const Tile = ({
       url={url}
       headline={headline}
       minimum={minimum}
+      nav={nav}
     >
       {headline && (
         <H3 xl="margin-bottom: 10px;" hover={hover}>
@@ -73,7 +75,7 @@ const Cont = styled(motion.div)`
   position: relative;
   flex-direction: column;
   padding: 60px 40px;
-  min-height: 300px;
+  min-height: ${({ nav }) => nav ? "100px" : "350px"};
   box-sizing: border-box;
   justify-content: center;
   transition: 0.2s ease;
