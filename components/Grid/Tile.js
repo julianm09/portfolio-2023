@@ -47,7 +47,7 @@ export const Tile = ({
       clickable={clickable}
       gridArea={gridArea}
       viewport={viewport}
-
+      exit={exit}
       transition={transition}
       initial={initial}
       whileInView={whileInView}
@@ -68,7 +68,7 @@ export const Tile = ({
   );
 };
 
-const Cont = styled(motion.div)`
+const Cont = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;

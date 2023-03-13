@@ -29,6 +29,7 @@ export default function Home() {
     <Column>
       <Grid xl="padding: 20px;">
         <Tile
+          transition={{ duration: 0.5, delay: 0.1 }}
           xl="grid-area: area-1;"
         >
           <H1 xl="margin-bottom: 20px;">Hi, I'm Julian</H1>
@@ -39,6 +40,7 @@ export default function Home() {
           </Text>
         </Tile>
         <Tile
+          transition={{ duration: 0.5, delay: 0.2 }}
           xl="grid-area: area-2; align-items: center;"
         >
           <Container>
@@ -66,6 +68,7 @@ export default function Home() {
           </Container>
         </Tile>
         <Tile
+          transition={{ duration: 0.5, delay: 0.5 }}
           xl="grid-area: area-3; padding: 0;"
           clickable
           onClick={() => handleTheme(theme, setTheme)}
@@ -73,6 +76,7 @@ export default function Home() {
           <RocketScene />
         </Tile>
         <Tile
+          transition={{ duration: 0.5, delay: 0.1 }}
           xl="grid-area: area-4; padding: 0;"
           clickable
           onClick={() => handleTheme(theme, setTheme)}
@@ -84,6 +88,7 @@ export default function Home() {
           headline="Projects"
           text="A collection of Work"
           star
+          transition={{ duration: 0.5, delay: 0.2 }}
           clickable
           xl="grid-area: area-5;"
           onClick={() =>
@@ -98,6 +103,7 @@ export default function Home() {
           headline="Ideas"
           text="A journal of sorts"
           star
+          transition={{ duration: 0.5, delay: 0.3 }}
           clickable
           xl="grid-area: area-6;"
         />
@@ -105,6 +111,7 @@ export default function Home() {
           headline="About Me"
           text="Allow me to reintroduce myself"
           star
+          transition={{ duration: 0.5, delay: 0.4 }}
           clickable
           xl="grid-area: area-7;"
           onClick={() =>
@@ -116,6 +123,7 @@ export default function Home() {
         />
 
         <Tile
+          transition={{ duration: 0.5, delay: 0.6 }}
           xl="grid-area: area-8; padding: 0;"
           clickable
           onClick={() => handleTheme(theme, setTheme)}
@@ -124,6 +132,7 @@ export default function Home() {
         </Tile>
         <Tile
           star
+          transition={{ duration: 0.5, delay: 0.6 }}
           xl="grid-area: area-9;"
           clickable
           onClick={() =>
