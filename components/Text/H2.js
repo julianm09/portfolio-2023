@@ -34,7 +34,7 @@ export const H2 = ({
   );
 };
 
-const Cont = styled(motion.h2)`
+const Cont = styled.h2`
   display: flex;
   flex-direction: row;
   margin: 0 0 20px 0;

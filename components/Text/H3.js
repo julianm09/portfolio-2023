@@ -31,7 +31,7 @@ export const H3 = ({
   );
 };
 
-const Cont = styled(motion.h3)`
+const Cont = styled.h3`
   display: flex;
   flex-direction: row;
   margin: 0 0 10px 0;

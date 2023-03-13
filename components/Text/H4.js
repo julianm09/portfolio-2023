@@ -31,7 +31,7 @@ export const H4 = ({
   );
 };
 
-const Cont = styled(motion.h4)`
+const Cont = styled.h4`
   display: flex;
   flex-direction: row;
   font-weight: ${text.h4.weight};
