@@ -36,7 +36,7 @@ export default function Home() {
     <Column>
       <Grid xl="padding: 20px;">
         <Tile
-          transition={{ type: "ease", duration: 0.25, delay: 0.1 }}
+          transition={{ duration: 0.25, delay: 0.1 }}
           xl="grid-area: area-1;"
         >
           <H1 xl="margin-bottom: 10px;">Hi, I'm Julian</H1>
@@ -49,7 +49,7 @@ export default function Home() {
         </Tile>
         <Tile
           nav
-          transition={{ type: "ease", duration: 0.25, delay: 0.2 }}
+          transition={{ duration: 0.25, delay: 0.2 }}
           xl="grid-area: area-2; align-items: center;"
         >
           <Container>
@@ -77,7 +77,7 @@ export default function Home() {
           </Container>
         </Tile>
         <Tile
-          transition={{ type: "ease", duration: 0.25, delay: 0.6 }}
+          transition={{ duration: 0.25, delay: 0.6 }}
           xl="grid-area: area-3; padding: 0;"
           clickable
           onClick={() => handleTheme(theme, setTheme)}
@@ -85,7 +85,7 @@ export default function Home() {
           <RocketScene />
         </Tile>
         <Tile
-          transition={{ type: "ease", duration: 0.25, delay: 0.1 }}
+          transition={{ duration: 0.25, delay: 0.1 }}
           xl="grid-area: area-4; padding: 0;"
         >
           <StarScene />
@@ -95,7 +95,7 @@ export default function Home() {
           headline="Projects"
           text="A collection of work"
           star
-          transition={{ type: "ease", duration: 0.25, delay: 0.2 }}
+          transition={{ duration: 0.25, delay: 0.2 }}
           clickable
           xl="grid-area: area-5;"
           onClick={() =>
@@ -109,14 +109,14 @@ export default function Home() {
         <Tile
           headline="Blog"
           text="Coming Soon"
-          transition={{ type: "ease", duration: 0.25, delay: 0.3 }}
+          transition={{ duration: 0.25, delay: 0.3 }}
           xl="grid-area: area-7; align-items: center; color: grey;"
         />
         <Tile
           headline="About Me"
           text="Allow me to introduce myself"
           star
-          transition={{ type: "ease", duration: 0.25, delay: 0.4 }}
+          transition={{ duration: 0.25, delay: 0.4 }}
           clickable
           xl="grid-area: area-6;"
           onClick={() =>
@@ -128,7 +128,7 @@ export default function Home() {
         />
 
         <Tile
-          transition={{ type: "ease", duration: 0.25, delay: 0.6 }}
+          transition={{ duration: 0.25, delay: 0.6 }}
           xl="grid-area: area-8; padding: 0;"
         >
           <StarScene />
@@ -136,7 +136,7 @@ export default function Home() {
         <Tile
           nav
           star
-          transition={{ type: "ease", duration: 0.25, delay: 0.6 }}
+          transition={{ duration: 0.25, delay: 0.6 }}
           xl="grid-area: area-9;"
           clickable
           onClick={() =>
