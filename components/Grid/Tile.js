@@ -7,6 +7,7 @@ import { useState } from "react";
 import StarSpinScene from "../Three/StarSpinScene";
 import { H2 } from "../Text/H2";
 import { Text } from "../Text/Text";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export const Tile = ({
   children,
@@ -15,11 +16,11 @@ export const Tile = ({
   md,
   sm,
   xs,
-  initial = { opacity: 0, x: 100 },
+  initial = { opacity: 0, x: 0 },
   whileInView = { opacity: 1, x: 0 },
   viewport = { once: true },
   transition = { ease: "linear", duration: 0.25 },
-  exit = { opacity: 0, x: -100 },
+  exit = { opacity: 0, x: 0 },
   onClick = () => {},
   clickable,
   gridArea,
@@ -30,6 +31,9 @@ export const Tile = ({
 }) => {
   const { router } = useRouter();
   const [hover, setHover] = useState();
+
+  const { width } = useWindowSize();
+
   return (
     <Cont
       onClick={onClick}
@@ -47,6 +51,8 @@ export const Tile = ({
       transition={transition}
       initial={initial}
       whileInView={whileInView}
+      url={url}
+      headline={headline}
     >
       {headline && (
         <H2 xl="margin-bottom: 20px;" hover={hover}>
@@ -66,11 +72,10 @@ const Cont = styled(motion.div)`
   display: flex;
   position: relative;
   flex-direction: column;
-  padding: 40px;
+  padding: 80px;
+  min-height: ${({ headline, url }) => (url || headline ? "300px" : "100px")};
   box-sizing: border-box;
   justify-content: center;
-
-  height: 300px;
   transition: 0.2s ease;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(111, 111, 111, 0.1);
@@ -102,6 +107,7 @@ const Cont = styled(motion.div)`
 
   @media (max-width: ${sizes.xs}) {
     ${({ xs }) => xs};
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
   }
 `;
 

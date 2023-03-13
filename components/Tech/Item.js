@@ -45,7 +45,7 @@ const Cont = styled(motion.div)`
   border-radius: 50px;
   padding: 5px 20px;
   white-space: nowrap;
-  margin: 0 10px 10px 0;
+  margin: 0 5px 5px 0;
   font-size: 12px;
   font-weight: 500;
   border: 1px solid grey;

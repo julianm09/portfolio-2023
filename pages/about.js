@@ -18,6 +18,7 @@ import { handleTheme } from "@/utils/functions/handleTheme";
 import { useTheme } from "@/utils/provider";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import {
   ArrowLeftCircle,
   ArrowRight,
@@ -31,6 +32,10 @@ import Iframe from "react-iframe";
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -56,7 +61,7 @@ export default function Home() {
           `}
           xs={`
           grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: minmax(8, 1fr) 300px;
+          grid-template-rows: minmax(9, 1fr) 300px;
           grid-template-areas:
             "area-1 area-1 area-1 area-1 area-1"
             "area-2 area-2 area-2 area-2 area-2"
@@ -64,8 +69,8 @@ export default function Home() {
             "area-5 area-5 area-5 area-5 area-5"
             "area-6 area-6 area-6 area-6 area-6"
             "area-4 area-4 area-4 area-4 area-4"
-            "area-7 area-7 area-7 area-7 area-7"
             "area-8 area-8 area-8 area-8 area-8"
+            "area-7 area-7 area-7 area-7 area-7"
             "area-9 area-9 area-9 area-9 area-9";
           `}
         >
@@ -151,22 +156,12 @@ export default function Home() {
             <Tech />
           </Tile>
           <Tile
-            transition={{ ease: "linear", duration: 0.5, delay: 0.4 }}
-            xl="grid-area: area-7; align-items: center;"
+            transition={{ ease: "linear", duration: 0.5, delay: 0.1 }}
+            xl="grid-area: area-7; padding: 0;"
+            clickable
+            onClick={() => handleTheme(theme, setTheme)}
           >
             <StarScene />
-            {/* 
-            <H3 xl="margin-bottom: 20px;">What I'm Listening To</H3>
-            <Iframe
-              style={{ borderRadius: "12px" }}
-              src="https://open.spotify.com/embed/playlist/6TM87gffvg0a3MlLKIn785?utm_source=generator&theme=0"
-              width="100%"
-              height="350px"
-              frameBorder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></Iframe> */}
           </Tile>
           <Tile
             star
@@ -179,7 +174,7 @@ export default function Home() {
           <Tile
             star
             transition={{ ease: "linear", duration: 0.5, delay: 0.6 }}
-            xl="grid-area: area-9; padding: 0;"
+            xl="grid-area: area-9;"
             clickable
             onClick={() =>
               router.push("/projects", undefined, {

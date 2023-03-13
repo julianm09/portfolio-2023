@@ -14,11 +14,16 @@ import { handleTheme } from "@/utils/functions/handleTheme";
 import { useTheme } from "@/utils/provider";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { ArrowRightCircle, Instagram, Linkedin, Mail } from "react-feather";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <Column>
@@ -128,7 +133,7 @@ export default function Home() {
         <Tile
           star
           transition={{ ease: "linear", duration: 0.5, delay: 0.6 }}
-          xl="grid-area: area-9; padding: 0;"
+          xl="grid-area: area-9;"
           clickable
           onClick={() =>
             router.push("/projects", undefined, {

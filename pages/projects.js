@@ -15,6 +15,7 @@ import { handleTheme } from "@/utils/functions/handleTheme";
 import { useTheme } from "@/utils/provider";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import {
   ArrowLeftCircle,
   ArrowRight,
@@ -27,6 +28,10 @@ import {
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const router = useRouter();
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>
@@ -52,7 +57,7 @@ export default function Home() {
           `}
           xs={`
           grid-template-columns: repeat(5, 1fr);
-          grid-template-rows: minmax(8, 1fr) 300px;
+          grid-template-rows: minmax(9, 1fr) 300px;
           grid-template-areas:
             "area-1 area-1 area-1 area-1 area-1"
             "area-2 area-2 area-2 area-2 area-2"
@@ -148,7 +153,7 @@ export default function Home() {
           <Tile
             star
             transition={{ ease: "linear", duration: 0.5, delay: 0.6 }}
-            xl="grid-area: area-9; padding: 0;"
+            xl="grid-area: area-9;"
             clickable
             onClick={() =>
               router.push("/about", undefined, {
