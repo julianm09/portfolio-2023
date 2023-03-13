@@ -2,6 +2,7 @@ import AppProvider from "@/utils/provider";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
