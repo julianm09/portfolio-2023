@@ -19,7 +19,7 @@ export const Tile = ({
   initial = { opacity: 0, x: 0 },
   whileInView = { opacity: 1, x: 0 },
   viewport = { once: true },
-  transition = { ease: "linear", duration: 0.25 },
+  transition = { duration: 0.25 },
   exit = { opacity: 0, x: 0 },
   onClick = () => {},
   clickable,
