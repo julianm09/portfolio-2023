@@ -98,7 +98,7 @@ export default function Home() {
           <Tile
             minimum
             transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
-            xl="grid-area: area-2;"
+            xl="grid-area: area-2; text-align: left;"
           >
             <H2 xl="margin-bottom: 20px;">Hello 👋</H2>
             <Text>
@@ -156,7 +156,7 @@ export default function Home() {
             transition={{ ease: "linear", duration: 0.25, delay: 0.3 }}
             xl="grid-area: area-6;"
           >
-            <H3 xl="margin-bottom: 20px;">Tech I've Used</H3>
+            <H3 xl="margin-bottom: 20px; text-align: left;">Tech I've Used</H3>
             <Tech />
           </Tile>
           <Tile

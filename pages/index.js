@@ -37,7 +37,7 @@ export default function Home() {
       <Grid xl="padding: 20px;">
         <Tile
           transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
-          xl="grid-area: area-1;"
+          xl="grid-area: area-1; text-align: left;"
         >
           <H1 xl="margin-bottom: 10px;">Hi, I'm Julian</H1>
           <Text xl="margin-bottom: 20px;">
@@ -111,6 +111,7 @@ export default function Home() {
           text="Coming Soon"
           transition={{ ease: "linear", duration: 0.25, delay: 0.3 }}
           xl="grid-area: area-7; align-items: center; color: grey;"
+          xs="text-align: center;"
         />
         <Tile
           headline="About Me"

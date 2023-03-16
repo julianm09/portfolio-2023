@@ -100,10 +100,10 @@ export default function Home() {
             clickable
             url="/images/ghost.png"
             transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
-            xl="grid-area: area-7; align-items: center;"
+            xl="grid-area: area-2; align-items: center;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
-              Invisible pimple patches.
+              Invisible pimple patches
             </Text>
             <Container>
               <Item>Next JS</Item>
@@ -186,10 +186,10 @@ export default function Home() {
             url="/images/cdwil.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
             clickable
-            xl="grid-area: area-2;"
+            xl="grid-area: area-7;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
-              Emily Carr's career development office.
+              Emily Carr's career development office
             </Text>
             <Container>
               <Item>React JS</Item>

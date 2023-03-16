@@ -118,6 +118,7 @@ const Cont = styled(motion.div)`
   border-radius: 10px;
   grid-area: ${({ gridArea }) => gridArea};
   overflow: hidden;
+  text-align: center;
 
   ${({ clickable }) =>
     clickable &&
