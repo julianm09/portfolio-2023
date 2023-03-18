@@ -1,6 +1,7 @@
 import { Column } from "@/components/Container/Column";
 import { Container } from "@/components/Container/Container";
 import { Grid } from "@/components/Grid/Grid";
+import { ProjectTile } from "@/components/Grid/ProjectTile";
 import { Tile } from "@/components/Grid/Tile";
 import { Item } from "@/components/Tech/Item";
 import { H1 } from "@/components/Text/H1";
@@ -92,10 +93,9 @@ export default function Home() {
               <ArrowLeftCircle />
             </Text>
           </Tile>
-          <Tile
-            onClick={() => {
-              window.open("https://ghost-two.vercel.app/", "_ blank");
-            }}
+          <ProjectTile
+            href="https://ghost-two.vercel.app/"
+            target="_blank"
             headline="Ghost"
             clickable
             url="/images/ghost.png"
@@ -110,17 +110,16 @@ export default function Home() {
               <Item>Blender</Item>
               <Item>Framer Motion</Item>
             </Container>
-          </Tile>
+          </ProjectTile>
 
-          <Tile
+          <ProjectTile
             headline="Cowboy Interactive"
+            href="https://www.cowboyinteractive.com/"
+            target="_blank"
             clickable
             url="/images/cowboy.png"
             transition={{ ease: "linear", duration: 0.25, delay: 0.5 }}
             xl="grid-area: area-3; padding: 0;"
-            onClick={() => {
-              window.open("https://www.cowboyinteractive.com/", "_ blank");
-            }}
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
               Custom web development service
@@ -130,7 +129,7 @@ export default function Home() {
               <Item>Three JS</Item>
               <Item>Framer Motion</Item>
             </Container>
-          </Tile>
+          </ProjectTile>
           <Tile
             transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-4; padding: 0;"
@@ -138,10 +137,9 @@ export default function Home() {
             <StarSceneTwo />
           </Tile>
 
-          <Tile
-            onClick={() => {
-              window.open("https://www.lelavietnamese.com/", "_ blank");
-            }}
+          <ProjectTile
+            href="https://www.lelavietnamese.com/"
+            target="_blank"
             headline="Lê La"
             url="/images/lela.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
@@ -156,12 +154,11 @@ export default function Home() {
               <Item>Sanity</Item>
               <Item>GraphQL</Item>
             </Container>
-          </Tile>
+          </ProjectTile>
 
-          <Tile
-            onClick={() => {
-              window.open("https://www.nxtsndy.com/", "_ blank");
-            }}
+          <ProjectTile
+            href="https://www.nxtsndy.com/"
+            target="_blank"
             headline="Nxtsndy"
             transition={{ ease: "linear", duration: 0.25, delay: 0.3 }}
             clickable
@@ -176,12 +173,11 @@ export default function Home() {
               <Item>Sanity</Item>
               <Item>Graph QL</Item>
             </Container>
-          </Tile>
+          </ProjectTile>
 
-          <Tile
-            onClick={() => {
-              window.open("https://www.creativecareers.ca/", "_ blank");
-            }}
+          <ProjectTile
+            href="https://www.creativecareers.ca/"
+            target="_blank"
             headline="CD + WIL"
             url="/images/cdwil.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
@@ -196,15 +192,11 @@ export default function Home() {
               <Item>Sanity</Item>
               <Item>Graph QL</Item>
             </Container>
-          </Tile>
+          </ProjectTile>
 
-          <Tile
-            onClick={() => {
-              window.open(
-                "https://julian-mayes-portfolio-n1gvg7mkm-cre8rec.vercel.app/",
-                "_ blank"
-              );
-            }}
+          <ProjectTile
+            href="https://julian-mayes-portfolio-n1gvg7mkm-cre8rec.vercel.app/"
+            target="_blank"
             url="/images/portfolio.png"
             headline="Portfolio V1"
             transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
@@ -219,7 +211,7 @@ export default function Home() {
               <Item>Framer Motion</Item>
               <Item>Three JS</Item>
             </Container>
-          </Tile>
+          </ProjectTile>
 
           <Tile
             nav
