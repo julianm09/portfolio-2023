@@ -113,21 +113,21 @@ export default function Home() {
           </ProjectTile>
 
           <ProjectTile
-            headline="Cowboy Interactive"
-            href="https://www.cowboyinteractive.com/"
+            headline="Ecouture"
+            href="https://www.ecouture.ca/"
             target="_blank"
             clickable
-            url="/images/cowboy.png"
+            url="/images/ecouture.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.5 }}
             xl="grid-area: area-3; padding: 0;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
-              Custom web development service
+              Sustainable clothing web app
             </Text>
             <Container>
-              <Item>Next JS</Item>
+              <Item>React JS</Item>
               <Item>Three JS</Item>
-              <Item>Framer Motion</Item>
+              <Item>Blender</Item>
             </Container>
           </ProjectTile>
           <Tile
