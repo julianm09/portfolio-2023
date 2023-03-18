@@ -119,7 +119,7 @@ export default function Home() {
             clickable
             url="/images/ecouture.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.5 }}
-            xl="grid-area: area-3; padding: 0;"
+            xl="grid-area: area-7; padding: 0;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
               Sustainable clothing web app
@@ -182,7 +182,7 @@ export default function Home() {
             url="/images/cdwil.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
             clickable
-            xl="grid-area: area-7;"
+            xl="grid-area: area-3;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
               Emily Carr's career development office
