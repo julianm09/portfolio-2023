@@ -93,14 +93,14 @@ export default function Home() {
               <ArrowLeftCircle />
             </Text>
           </Tile>
-          <ProjectTile
+          {/* <ProjectTile
             href="https://ghost-two.vercel.app/"
             target="_blank"
             headline="Ghost"
             clickable
             url="/images/ghost.png"
             transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
-            xl="grid-area: area-2; align-items: center;"
+            xl="grid-area: area-6; align-items: center;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
               Invisible pimple patches
@@ -110,7 +110,7 @@ export default function Home() {
               <Item>Blender</Item>
               <Item>Framer Motion</Item>
             </Container>
-          </ProjectTile>
+          </ProjectTile> */}
 
           <ProjectTile
             headline="Ecouture"
@@ -119,7 +119,7 @@ export default function Home() {
             clickable
             url="/images/ecouture.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.5 }}
-            xl="grid-area: area-7; padding: 0;"
+            xl="grid-area: area-5; padding: 0;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
               Sustainable clothing web app
@@ -137,7 +137,21 @@ export default function Home() {
             <StarSceneTwo />
           </Tile>
 
-          <ProjectTile
+          <Tile
+            transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
+            xl="grid-area: area-7; padding: 0;"
+          >
+            <StarSceneTwo />
+          </Tile>
+
+          <Tile
+            transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
+            xl="grid-area: area-3; padding: 0;"
+          >
+            <StarSceneTwo />
+          </Tile>
+
+          {/* <ProjectTile
             href="https://www.lelavietnamese.com/"
             target="_blank"
             headline="Lê La"
@@ -154,7 +168,7 @@ export default function Home() {
               <Item>Sanity</Item>
               <Item>GraphQL</Item>
             </Container>
-          </ProjectTile>
+          </ProjectTile> */}
 
           <ProjectTile
             href="https://www.nxtsndy.com/"
@@ -162,7 +176,7 @@ export default function Home() {
             headline="Nxtsndy"
             transition={{ ease: "linear", duration: 0.25, delay: 0.3 }}
             clickable
-            xl="grid-area: area-6;"
+            xl="grid-area: area-2;"
             url="/images/nxtsndy.gif"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
@@ -182,7 +196,7 @@ export default function Home() {
             url="/images/cdwil.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
             clickable
-            xl="grid-area: area-3;"
+            xl="grid-area: area-6;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
               Emily Carr's career development office
