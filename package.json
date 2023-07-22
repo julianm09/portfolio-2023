@@ -6,9 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@prismicio/client": "^6.7.3",
+    "@prismicio/helpers": "^2.3.9",
+    "@prismicio/next": "^1.0.3",
+    "@prismicio/react": "^2.5.2",
+    "@prismicio/slice-simulator-react": "^0.2.3",
     "@react-three/drei": "^9.57.2",
     "@react-three/fiber": "^8.12.0",
     "eslint": "8.36.0",
@@ -22,5 +28,9 @@
     "react-iframe": "^1.8.5",
     "styled-components": "^5.3.8",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@prismicio/types": "^0.2.7",
+    "slice-machine-ui": "^0.7.1"
   }
 }

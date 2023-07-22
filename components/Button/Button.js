@@ -87,6 +87,6 @@ const ButtonUI = styled(motion.button)`
 
   &:hover {
     filter: brightness(110%);
-    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 20px rgba(79, 97, 158, 0.50);
   }
 `;

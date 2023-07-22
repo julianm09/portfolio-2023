@@ -69,38 +69,40 @@ export const Tile = ({
 
   if (width > 800) {
     return (
-      <Cont
-        onClick={onClick}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        xl={xl}
-        lg={lg}
-        md={md}
-        sm={sm}
-        xs={xs}
-        clickable={clickable}
-        gridArea={gridArea}
-        viewport={viewport}
-        exit={exit}
-        transition={transition}
-        initial={initial}
-        whileInView={whileInView}
-        url={url}
-        headline={headline}
-        minimum={minimum}
-        nav={nav}
-      >
-        {headline && (
-          <H3 xl="margin-bottom: 10px;" hover={hover}>
-            {headline}
-          </H3>
-        )}
+      <>
+        <Cont
+          onClick={onClick}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          xl={xl}
+          lg={lg}
+          md={md}
+          sm={sm}
+          xs={xs}
+          clickable={clickable}
+          gridArea={gridArea}
+          viewport={viewport}
+          exit={exit}
+          transition={transition}
+          initial={initial}
+          whileInView={whileInView}
+          url={url}
+          headline={headline}
+          minimum={minimum}
+          nav={nav}
+        >
+          {headline && (
+            <H3 xl="margin-bottom: 10px;" hover={hover}>
+              {headline}
+            </H3>
+          )}
 
-        {text && <Text>{text}</Text>}
-        {children}
-        {url && <Img hover={hover} url={url && url} />}
-        {star && <StarSpinScene hover={hover} />}
-      </Cont>
+          {text && <Text>{text}</Text>}
+          {children}
+          {url && <Img hover={hover} url={url && url} />}
+          {star && <StarSpinScene hover={hover} />}
+        </Cont>
+      </>
     );
   }
 };
@@ -120,15 +122,22 @@ const Cont = styled(motion.div)`
   overflow: hidden;
   text-align: center;
 
+
   ${({ clickable }) =>
     clickable &&
     `
+    
     box-shadow: 0px 0px 20px rgba(100, 100, 100, 0.1);
     align-items: center; 
     cursor: pointer; 
+    
     &:hover{
-      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-  }`}
+      filter: brightness(110%);
+      border: 1px solid rgba(79, 97, 158, 0.50);
+      box-shadow: 0px 0px 20px rgba(79, 97, 158, 0.50);
+    }
+    `
+}
 
   ${({ xl }) => xl};
 

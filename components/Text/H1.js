@@ -38,7 +38,7 @@ const Cont = styled.h1`
   font-weight: ${font.h1.weight};
   font-size: ${font.h1.xl};
 
-	background: linear-gradient(-90deg, #8461E7, #D0CEEE, #BB8EE9, #C6C3EC, #DEDBF0);
+	background: linear-gradient(-90deg, #4F619E, #22367D, #273773, #22367D, #4F619E);
 	background-size: 300%;
   -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;

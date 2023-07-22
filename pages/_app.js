@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { Cursor } from "@/components/Cursor/Cursor";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -72,6 +73,7 @@ function MyApp({ Component, pageProps }) {
 
       <AppProvider>
         <AnimatePresence mode="wait">
+          <Cursor/>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </AppProvider>

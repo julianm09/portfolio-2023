@@ -79,7 +79,6 @@ export default function Home() {
         >
           <Tile
             nav
-            star
             clickable
             transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-1"
@@ -90,7 +89,7 @@ export default function Home() {
               })
             }
           >
-            <Text xl="margin-bottom: 20px;">Go Back Home 🚀</Text>
+            <Text xl="margin-bottom: 20px;">Go Back Home</Text>
             <Text xl="color: grey">
               <ArrowLeftCircle />
             </Text>
@@ -102,8 +101,7 @@ export default function Home() {
           >
             <H2 xl="margin-bottom: 20px;">Hello 👋</H2>
             <Text>
-              My name is Julian, and I make websites. I love music, photography,
-              and web development. My main tools include Next JS, Three JS, and
+              My name is Julian, and I make websites and apps. I love music and photography. My main tools include Next JS, Three JS, and
               Framer Motion, while I use Figma and Blender for design. I am
               always open to collaborate. So don't be afraid to get in touch!
             </Text>
@@ -136,12 +134,6 @@ export default function Home() {
                 </Link>
               </Container>
               <Container xl="margin-right: 20px;">
-                <Link
-                  href="https://www.instagram.com/julianmayes.dev/"
-                  target="_blank"
-                >
-                  <Instagram />
-                </Link>
               </Container>
               <Container>
                 <Link href="https://github.com/julianmayes" target="_blank">
@@ -167,7 +159,6 @@ export default function Home() {
           </Tile>
           <Tile
             minimum
-            star
             transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
             xl="grid-area: area-8; align-items: center;"
           >
@@ -177,7 +168,6 @@ export default function Home() {
           </Tile>
           <Tile
             nav
-            star
             transition={{ ease: "linear", duration: 0.25, delay: 0.6 }}
             xl="grid-area: area-9;"
             clickable

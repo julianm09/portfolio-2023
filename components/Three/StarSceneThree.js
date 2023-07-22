@@ -21,7 +21,6 @@ export default function StarSceneThree({ }) {
         height: "100%",
         position: "absolute",
         top: 0,
-        zIndex: -100,
         background: themes[theme].primary,
       }}
     >
@@ -42,7 +41,7 @@ export default function StarSceneThree({ }) {
         {theme === "dark" ? (
           <Stars
             color="black"
-            radius={100}
+            radius={1000}
             depth={100}
             count={1000}
             factor={4}

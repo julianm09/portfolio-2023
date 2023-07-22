@@ -9,7 +9,7 @@ import { useTheme } from "@/utils/provider";
 import useScrollTop from "@/hooks/useScrollTop";
 import { themes } from "@/utils/variables";
 
-export default function StarSceneTwo({ }) {
+export default function StarSceneTwo({}) {
   const windowSize = useWindowSize();
   const scrollTop = useScrollTop();
   const { theme } = useTheme();
@@ -21,7 +21,6 @@ export default function StarSceneTwo({ }) {
         height: "100%",
         position: "absolute",
         top: 0,
-        zIndex: -100,
         background: themes[theme].primary,
       }}
     >
@@ -31,7 +30,10 @@ export default function StarSceneTwo({ }) {
           makeDefault
           position={windowSize.width > 500 ? [0, 0, 5] : [0, 0, 10]}
         />
-        <ambientLight intensity={1} color={theme === "dark" ? "blue" : "grey"} />
+        <ambientLight
+          intensity={1}
+          color={theme === "dark" ? "blue" : "grey"}
+        />
         <pointLight intensity={1} color={"white"} position={[10, 10, 10]} />
         <pointLight
           intensity={1}
@@ -42,7 +44,7 @@ export default function StarSceneTwo({ }) {
         {theme === "dark" ? (
           <Stars
             color="black"
-            radius={100}
+            radius={1000}
             depth={100}
             count={1000}
             factor={4}
@@ -52,15 +54,7 @@ export default function StarSceneTwo({ }) {
           <></>
         )}
         <Star scrollTop={scrollTop} x={15} y={0} z={-15} rx={0} ry={0} rz={0} />
-        <Star
-          scrollTop={scrollTop}
-          x={0}
-          y={10}
-          z={-20}
-          rx={0}
-          ry={0}
-          rz={0}
-        />
+        <Star scrollTop={scrollTop} x={0} y={10} z={-20} rx={0} ry={0} rz={0} />
         <Star
           scrollTop={scrollTop}
           x={-15}

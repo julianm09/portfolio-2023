@@ -9,6 +9,8 @@ import { Text } from "@/components/Text/Text";
 import RocketScene from "@/components/Three/RocketScene";
 import Scene from "@/components/Three/Scene";
 import StarScene from "@/components/Three/StarScene";
+import StarSceneThree from "@/components/Three/StarSceneThree";
+import StarSceneTwo from "@/components/Three/StarSceneTwo";
 import StarSpinScene from "@/components/Three/StarSpinScene";
 import SwirlScene from "@/components/Three/SwirlScene";
 import { handleTheme } from "@/utils/functions/handleTheme";
@@ -41,9 +43,9 @@ export default function Home() {
         >
           <H1 xl="margin-bottom: 10px;">Hi, I'm Julian</H1>
           <Text xl="margin-bottom: 20px;">
-            A web developer and designer based in Vancouver, BC. This website is
+            A frontend developer based in Vancouver, BC. This website is
             a playground to showcase what I have been working on. Thanks for
-            visiting 🚀
+            visiting!
           </Text>
           <Button href="mailto:julianmayes@gmail.com">Contact Me</Button>
         </Tile>
@@ -61,14 +63,7 @@ export default function Home() {
                 <Linkedin />
               </Link>
             </Container>
-            <Container xl="margin-right: 20px;">
-              <Link
-                href="https://www.instagram.com/julianmayes.dev/"
-                target="_blank"
-              >
-                <Instagram />
-              </Link>
-            </Container>
+            <Container xl="margin-right: 20px;"></Container>
             <Container>
               <Link href="https://github.com/julianmayes" target="_blank">
                 <GitHub />
@@ -79,10 +74,8 @@ export default function Home() {
         <Tile
           transition={{ ease: "linear", duration: 0.25, delay: 0.6 }}
           xl="grid-area: area-3; padding: 0;"
-          clickable
-          onClick={() => handleTheme(theme, setTheme)}
         >
-          <RocketScene />
+          <StarSceneThree />
         </Tile>
         <Tile
           transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
@@ -94,7 +87,6 @@ export default function Home() {
         <Tile
           headline="Projects"
           text="A collection of work"
-          star
           transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
           clickable
           xl="grid-area: area-5;"
@@ -116,7 +108,6 @@ export default function Home() {
         <Tile
           headline="About Me"
           text="Allow me to introduce myself"
-          star
           transition={{ ease: "linear", duration: 0.25, delay: 0.4 }}
           clickable
           xl="grid-area: area-6;"
@@ -132,11 +123,10 @@ export default function Home() {
           transition={{ ease: "linear", duration: 0.25, delay: 0.6 }}
           xl="grid-area: area-8; padding: 0;"
         >
-          <StarScene />
+          <StarSceneTwo />
         </Tile>
         <Tile
           nav
-          star
           transition={{ ease: "linear", duration: 0.25, delay: 0.6 }}
           xl="grid-area: area-9;"
           clickable

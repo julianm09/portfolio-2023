@@ -15,6 +15,8 @@ export default function Star({
 }) {
   const ref = useRef();
 
+  const [clicked, click] = useState(false);
+
   useFrame(
     (state) => (
       //
@@ -53,13 +55,19 @@ export default function Star({
   const group = useRef();
   const { nodes, materials } = useGLTF("/star.glb");
   return (
-    <group ref={group} dispose={null}>
+    <group
+      ref={group}
+      dispose={null}
+      onClick={(event) => click(!clicked)}
+    >
       <mesh
         ref={ref}
         geometry={nodes.Circle001.geometry}
-        material={materials["Material.001"]}
+        // material={materials["Material.001"]}
         rotation={[-Math.PI / 2, -1.26, Math.PI]}
-      />
+      >
+        <meshStandardMaterial color={clicked ? "#4F619E" : "#fff"} />
+      </mesh>
     </group>
   );
 }

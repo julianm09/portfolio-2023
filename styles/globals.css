@@ -39,3 +39,15 @@ img {
 	50% { background-position: 100% 50%; }
 	100% { background-position: 0px 50%; }
 }
+
+@keyframes rotate {
+  from {
+    transform: scale(100%) rotate(0deg);
+  }
+  50% {
+    transform: scale(90%) rotate(180deg);
+  }
+  to {
+    transform: scale(100%) rotate(360deg);
+  }
+}
