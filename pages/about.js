@@ -136,7 +136,7 @@ export default function Home() {
               <Container xl="margin-right: 20px;">
               </Container>
               <Container>
-                <Link href="https://github.com/julianmayes" target="_blank">
+                <Link href="https://github.com/julianm09" target="_blank">
                   <GitHub />
                 </Link>
               </Container>

@@ -2,6 +2,7 @@ export const technologies = [
   "Next JS",
   "React",
   "React Native",
+  "Typescript",
   "Graph QL",
   "Sanity",
   "Framer Motion",
@@ -16,4 +17,5 @@ export const technologies = [
   "Figma",
   "Adobe CC",
   "Blender",
+  "GPT-3"
 ];

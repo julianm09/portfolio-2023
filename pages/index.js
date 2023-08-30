@@ -42,10 +42,10 @@ export default function Home() {
           xl="grid-area: area-1; text-align: left;"
         >
           <H1 xl="margin-bottom: 10px;">Hi, I'm Julian</H1>
-          <Text xl="margin-bottom: 20px;">
-            A frontend developer based in Vancouver, BC. This website is
-            a playground to showcase what I have been working on. Thanks for
-            visiting!
+          <Text xl="margin-bottom: 20px; max-width: 550px;">
+            A frontend developer and designer based in Vancouver, BC. This
+            website is a playground to showcase what I have been working on.
+            Thanks for visiting!
           </Text>
           <Button href="mailto:julianmayes@gmail.com">Contact Me</Button>
         </Tile>
@@ -65,7 +65,7 @@ export default function Home() {
             </Container>
             <Container xl="margin-right: 20px;"></Container>
             <Container>
-              <Link href="https://github.com/julianmayes" target="_blank">
+              <Link href="https://github.com/julianm09" target="_blank">
                 <GitHub />
               </Link>
             </Container>

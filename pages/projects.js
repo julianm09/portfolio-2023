@@ -92,6 +92,26 @@ export default function Home() {
               <ArrowLeftCircle />
             </Text>
           </Tile>
+
+          <ProjectTile
+            headline="Galla"
+            href="https://galla.vercel.app/"
+            target="_blank"
+            clickable
+            url="/images/galla.png"
+            transition={{ ease: "linear", duration: 0.25, delay: 0.5 }}
+            xl="grid-area: area-2; padding: 0;"
+          >
+            <Text xl="margin-bottom:20px; max-width: 450px; text-align: center;">
+              AI powered website prototyping tool (work in progress)
+            </Text>
+            <Container>
+              <Item>Next JS</Item>
+              <Item>GTP-3</Item>
+              <Item>Typescript</Item>
+            </Container>
+          </ProjectTile>
+
           <ProjectTile
             href="https://ghost-two.vercel.app/"
             target="_blank"
@@ -111,7 +131,7 @@ export default function Home() {
             </Container>
           </ProjectTile>
 
-          <ProjectTile
+          {/*           <ProjectTile
             headline="Ecouture"
             href="https://www.ecouture.ca/"
             target="_blank"
@@ -128,16 +148,13 @@ export default function Home() {
               <Item>Three JS</Item>
               <Item>Blender</Item>
             </Container>
-          </ProjectTile>
+          </ProjectTile> */}
           <Tile
             transition={{ ease: "linear", duration: 0.25, delay: 0.1 }}
             xl="grid-area: area-4; padding: 0;"
           >
             <StarSceneTwo />
           </Tile>
-
-
-     
 
           <ProjectTile
             href="https://www.lelavietnamese.com/"
@@ -146,7 +163,7 @@ export default function Home() {
             url="/images/lela.gif"
             transition={{ ease: "linear", duration: 0.25, delay: 0.2 }}
             clickable
-            xl="grid-area: area-5;"
+            xl="grid-area: area-7;"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
               Authentic Vietnamese restaurant in Calgary
@@ -164,7 +181,7 @@ export default function Home() {
             headline="Nxtsndy"
             transition={{ ease: "linear", duration: 0.25, delay: 0.3 }}
             clickable
-            xl="grid-area: area-2;"
+            xl="grid-area: area-5;"
             url="/images/nxtsndy.gif"
           >
             <Text xl="margin-bottom:20px; max-width: 350px; text-align: center;">
